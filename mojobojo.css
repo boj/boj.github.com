@@ -1,0 +1,95 @@
+body {
+	font: 12px/1.5em "Lucida Grande", "Lucida Sans Unicode";
+	text: #000;
+}
+
+a {
+	color: #333;
+}
+
+a:visited {
+	color: #039;
+}
+
+a:hover {
+	color: #666;
+}
+
+/* Site ID tags */
+
+#header h1 {
+	font-size: 0em;
+	background: transparent url('images/mojobojo.png') no-repeat center top;
+	width: 444px;
+	height: 38px;
+	padding-bottom: 10px;
+}
+
+#content {
+	background: #fff;
+	margin: 30px 20% 10% 20%;
+}
+
+#content_body {
+	margin: 5em;
+}
+
+#footer {
+	text-align: center;
+	margin: 10px;
+}
+
+#navigation {
+	display: block;
+	text-align: center;
+}
+
+#navigation a {
+	padding: 3px;
+}
+
+p.intro:first-letter {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+/* Personal information box */
+.information {
+	display: block;
+	text-align: center;
+}
+
+.name {
+	font-size: larger;
+	font-weight: bold;
+}
+
+/* Resume Data */
+
+.section_title {
+	font-variant: small-caps;
+	font-size: larger;
+	font-weight: bolder;
+}
+
+.section_detail {
+	display: block;
+	margin: 10px;
+}
+
+.work_box {
+	display: block;
+	border: 1px solid #000000;
+	margin: 10px;
+}
+
+.employer_data {
+	display: block;
+	font-weight: bolder;
+	margin: 10px;
+}
+
+.job_data {
+	display: block;
+	margin: 10px;
+}
