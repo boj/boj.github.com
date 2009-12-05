@@ -1,0 +1,16 @@
+---
+layout: default
+title: mojobojo, Kyoto, etc.
+---
+
+h1. {{ page.title }}
+
+p. 5 Dec 2009 - Okinawa, Japan
+
+I've decided to use "Jekyll":http://github.com/mojombo/jekyll for my ravings, mainly due to the same exact reasons why the author Tom created it.  I pretty much quit blogging because the data would be on some remote database server somewhere, and due to various reasons amongst which one is time, the data got lost.  I had my own little template system I wrote to automate mojobojo creation and store on GitHub, but Jekyll was a little more full featured so in the interest of not reinventing the wheel I have made the switch.
+
+Tomorrow is the Japanese Language Proficiency Test (JLPT), which up until this year was only available to take once per year.  I will be taking the level 2 exam for the first time (on a scale of 4 [beginner] to 1 [fluent]), which is a relatively fancy certificate level to obtain if one seeks to do business level work in Japan. I have no confidence in my ability to pass said exam, since coding _The Idea_ has taken highest priority over everything else in my life.  However, I will definitely do my best and report the results at a later date.
+
+Immediately after taking the exam I will hop on a plane to Kyoto, and leave Okinawa behind me while I settle into my new home, if only temporarily.  I found a nice little company that rents small apartments out to students and foreigners, and decided to move back to the #1 region of Japan I absolutely love.  My visa doesn't expire until August 2010, however, I am still hoping some kind of opportunity rears it's head before then.
+
+My primary driving force right now is _The Idea_.  I plan to announce what it is and get some friends involved for testing sometime around early January.  With any luck a release version will be ready by March, and with a lot of luck I may have solved all future financial problems.  I know that's pipe dream talk, but I have faith.
