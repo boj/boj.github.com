@@ -1,0 +1,24 @@
+---
+layout: default
+title: Back in Kyoto
+---
+
+h1. {{ page.title }}
+
+p. 7 Dec 2009 - Kyoto, Japan
+
+It was quite the long trip to get back to Kyoto.  My day started at 6am on Sunday where I finished packing the last few little things into my boxes, ate some breakfast and drank some coffee, then relaxed until my friends Ian and Shelly woke up so they could take me to the testing center for the JLPT at Ryukyu University.  At 9:45am the test began, and carried on and off through to 2:40pm.  I am highly confident that I did not pass this exam, but I have to say it was a good experience which gave me a benchmark for what to expect next time.  After that I headed down to Kokusai Dori, a big street with a lot of Okinawan souvenir vendors so I could buy some things for friends back in Kyoto, then off to the airport and towards my final destination.  The plane left at 6:45pm, I landed at Kansai Airport at 9pm, took two trains to Mom-sensei's house, and arrived at midnight.  We drank a couple beers together, her husband drank the venomous snake alcohol I gave them, and we crashed at 1am.  Unfortunately Mom-sensei had to wake up at 4:30am to go on a fishing trip, so I got up at 5:30am and greeted her as she went out the door, then left for Kyoto with her husband at 7am because he had to go to work.  Killed time in Kyoto until 1pm, at which point I met with my landlord, signed my papers, and moved into my small one room apartment.
+
+I absolutely love Kyoto, and do plan on checking out places that weren't so convenient to me when I lived off in the not so nearby town of Kyotamba, but that will have to come with time.  I did find some super markets (I've got this thing for them, I love wandering around inside), the first of which I was greeted by a little 4 year old girl while I was bent down looking at something.  The conversation kind of went like this (in Japanese).
+
+* *Girl* _just stares at me._
+* *Me* : "Konnichiwa"
+* *Girl* : "Isn't it 'Hello'?"
+* *Me* : "Oh, right.  Hello!"
+* *Girl* : "What are you buying?  Dinner?  You should get this and this and this..."
+* *Me* : "Oh, really?"
+* *Girl* : "Yes, and make sure you get home and cook your dinner soon!"
+
+She then walked around the store as her mother called to her, saying she was leaving without her.  Little children are extremely cute (most of the time, I am sure parents of children would say).
+
+Anyways, right now my number one priority is working on _The Idea_, and making that an absolute reality.  I've also been contracted by my brother to build a small system for his business, and will be using Google's App Engine to build it in Python.  Since yesterday I've been banging out code, and don't plan on stopping until I've got these things in production.
