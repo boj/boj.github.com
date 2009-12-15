@@ -1,16 +1,7 @@
 ---
 layout: default
-title: mojobojo dot com
+title: { site: mojobojo dot com }
 ---
-
-<div id="blurb">
-	<p>
-		<strong>Samurai:</strong> Hakuin, where do I go when I die?<br/>
-		<strong>Hakuin:</strong> I have no idea.<br/>
-		<strong>Samurai:</strong> What do you mean you don't know? You're a Zen master!<br/>
-		<strong>Hakuin:</strong> Yes, but not a dead one.<br/>
-	</p>
-</div>
 
 <div id="rants">
 	<h2>Rants</h2>
@@ -19,4 +10,13 @@ title: mojobojo dot com
 		<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
 	</ul>
+</div>
+
+<div id="blurb">
+	<p>
+		<strong>Samurai:</strong> Hakuin, where do I go when I die?<br/>
+		<strong>Hakuin:</strong> I have no idea.<br/>
+		<strong>Samurai:</strong> What do you mean you don't know? You're a Zen master!<br/>
+		<strong>Hakuin:</strong> Yes, but not a dead one.<br/>
+	</p>
 </div>
