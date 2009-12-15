@@ -1,18 +1,20 @@
 body {
 	font: 12px/1.5em "Lucida Grande", "Lucida Sans Unicode";
-	text: #000;
+	color: #888;
+	background: #212121;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #6bb4fb;
 }
 
 a {
-	color: #333;
-}
-
-a:visited {
-	color: #039;
+	color: #555;
+	text-decoration: none;
 }
 
 a:hover {
-	color: #666;
+	text-decoration: underline;
 }
 
 .full_background {
@@ -23,16 +25,15 @@ a:hover {
 
 /* Site ID tags */
 
-#header h1 {
-	font-size: 0em;
-	background: transparent url('/images/mojobojo.png') no-repeat center top;
-	width: 444px;
-	height: 38px;
-	padding-bottom: 10px;
+#header {
+	padding: 2em;
+}
+
+#header > h1 > a {
+	color: #7D1B7E;
 }
 
 #content {
-	background: #fff;
 	margin: 30px 20% 10% 20%;
 }
 
