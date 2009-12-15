@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mongo - Textile - The Idea
+title: MongoDB - Cucumber - The Project
 ---
 
 h1. {{ page.title }}
