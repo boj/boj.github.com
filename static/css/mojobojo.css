@@ -1,6 +1,6 @@
 body {
 	font: 12px/1.5em "Lucida Grande", "Lucida Sans Unicode";
-	color: #888;
+	color: #999;
 	background: #212121;
 }
 
@@ -30,11 +30,12 @@ a:hover {
 }
 
 #header > h1 > a {
-	color: #522f60;
+	font: 1.5em verdana;
+	color: #19448e;
 }
 
 #content {
-	margin: 30px 20% 10% 20%;
+	margin: 5px 20% 10% 20%;
 }
 
 #content_body {
@@ -44,6 +45,10 @@ a:hover {
 #footer {
 	text-align: center;
 	margin: 10px;
+}
+
+#footer > span {
+	color: #b4866b;
 }
 
 #navigation {
@@ -99,7 +104,6 @@ p.intro:first-letter {
 
 .work_box {
 	display: block;
-	border: 1px solid #000000;
 	margin: 10px;
 }
 

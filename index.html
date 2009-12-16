@@ -3,6 +3,13 @@ layout: default
 title: "{ site : mojobojo dot com }"
 ---
 
+<div id="post">
+  {{ site.posts.first.content }}
+  <a id="more" href="{{ first_post.url }}#disqus">Comments &raquo;</a>
+</div>
+
+<hr/>
+
 <div id="rants">
 	<h2>Rants</h2>
 	<ul class="posts">
@@ -12,6 +19,8 @@ title: "{ site : mojobojo dot com }"
 	</ul>
 </div>
 
+<hr/>
+
 <div id="blurb">
 	<p>
 		<strong>Samurai:</strong> Hakuin, where do I go when I die?<br/>
@@ -20,3 +29,5 @@ title: "{ site : mojobojo dot com }"
 		<strong>Hakuin:</strong> Yes, but not a dead one.<br/>
 	</p>
 </div>
+
+<hr/>
