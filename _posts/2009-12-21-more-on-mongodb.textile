@@ -1,0 +1,99 @@
+---
+layout: blog
+title: More on MongoDB
+---
+
+h1. {{ page.title }}
+
+p. 21 Dec 2009 - Kyoto, Japan
+
+Shifting from the RDBMS mentality to Document storage has been quite fun.  It was always a chore to have to write that extra join table, and throw in all the relationships in the models.  MongoDB very cleanly erases that step, and gives me a little more time to work on the code I actually care about.  The following is an example of this change.
+
+h3. Old Way
+
+In order to connect Characters to Skills, I had to define a CharacterSkill join table.  This required adding a new migration to Rails (or in my case I just edit and rerun a master migration), and creating an additional CharacterSkill model with the relationships.
+
+db/migrations/xxx-master_migration.rb
+
+{% highlight ruby linenos %}
+class MasterMigration < ActiveRecord::Migration
+  def self.up
+    create_table :skills do |t|
+      t.column :name, :string
+      # etc
+    end
+    create_table :characters do |t|
+      t.column :name, :string
+      # etc
+    end
+    create_table :character_skills do |t|
+      t.column :character_id, :integer
+      t.column :skill_id, :integer
+    end
+  end
+
+  def self.down
+    drop_table :skills
+    drop_table :characters
+    drop_table :character_skills
+  end
+end
+{% endhighlight %}
+
+app/models
+
+{% highlight ruby linenos %}
+class Skills < ActiveRecord::Base
+end
+
+class Character < ActiveRecord::Base
+  has_many :skills, :through => :character_skills
+	
+  def add_skill(skill_id)
+    CharacterSkill.create(:character_id => self.id, :skill_id => skill_id)
+  end
+end
+
+class CharacterSkill < ActiveRecord::Base
+  belongs_to :skill
+  belongs_to :character
+end
+{% endhighlight %}
+
+usage
+
+{% highlight ruby linenos %}
+character = Character.find(:first, :conditions => ["name = 'bojo'"])
+character.add_skill(Skill.find(:first, :conditions => ["name = 'Attack'"]).id)
+{% endhighlight %}
+
+Whew, a lot of work just for one relationship, right?
+
+h3. New Way
+
+app/models
+
+{% highlight ruby linenos %}
+class Skills
+  include MongoMapper::Document
+  
+  key :name, String
+end
+
+class Character
+  include MongoMapper::Document
+  
+  key :name, String
+
+  many :skills
+end
+{% endhighlight %}
+
+usage
+
+{% highlight ruby linenos %}
+character = Character.find(:first, :name => "bojo")
+character.skills << Skill.find(:first, :name => "Attack")
+{% endhighlight %}
+
+That's it!  It really is that simple.
