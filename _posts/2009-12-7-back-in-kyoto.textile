@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Back in Kyoto
+summary: Personal post covering my move back to Kyoto, and an encounter with a 4 year old at the first super market I went to.
 ---
 
 h1. {{ page.title }}

@@ -62,15 +62,26 @@ a:hover {
 
 #blurb {
 	margin: 2em;
-	text-align: center;
 }
 
 #blurb.p {
 
 }
 
-#rants {
+#posts {
 	margin: 2em;
+}
+
+.post {
+	margin: 2em;
+}
+
+.post_date {
+	font-weight: bold;
+}
+
+.post_summary {
+	padding: 0.5em;
 }
 
 p.intro:first-letter {

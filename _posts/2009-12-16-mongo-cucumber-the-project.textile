@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: MongoDB - Cucumber - The Project
+summary: Examples of how to integrate MongoMapper into a Rails project, and get it working happily with the Cucumber BDD test suite.
 ---
 
 h1. {{ page.title }}

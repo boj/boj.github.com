@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: More on MongoDB
+summary: Simple examples of the RDBMS "old way", and MongoDB "new way" of creating relationships.
 ---
 
 h1. {{ page.title }}

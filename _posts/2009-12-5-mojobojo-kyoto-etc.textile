@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: mojobojo, Kyoto, etc.
+summary: Opening blog post, mostly personal.  About to take the JLPT, then move from Okinawa back to Kyoto.
 ---
 
 h1. {{ page.title }}
