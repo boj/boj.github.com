@@ -8,7 +8,7 @@ h1. {{ page.title }}
 
 p. 23 Dec 2009 - Kyoto, Japan
 
-I popped into the "MongoMapper Google Group":http://groups.google.com/group/mongomapper and inquired about some behavior I thought was odd.  Like most posts tend to go, I figured out what was causing my issue moments after posting by digging through the mongomapper code.  Thankfully John Nunemaker gave me a satisfactory solution for handling my issue, although pointed out that he would eventually create such an association once he sorted it out.
+I popped into the "MongoMapper Google Group":http://groups.google.com/group/mongomapper and inquired about some behavior I thought was odd.  Like most posts tend to go, I figured out what was causing the problem moments after posting by digging through the mongomapper code.  Thankfully John Nunemaker gave me a satisfactory solution for handling my issue, although pointed out that he would eventually create such an association once he sorted it out.
 
 I assumed the following code would actually work:
 
@@ -80,4 +80,4 @@ Now everything works wonderfully.  The only drawback is that there's no fancy fi
 
 My ultimate hope was that some DBRef/dereference magic was going on to create/translate the relationships for me, but after reading around a little it appears to be a fancy way to create collection_id foreign key relationships, and not something that built many-to-many relationships as I pictured in my head.
 
-In conclusion, I now have a decently working many-to-many relationship working, and all future Character's are not stealing everyone else's skills!
+In conclusion, I now have a decently working many-to-many relationship, and all future Character's are not stealing everyone else's skills!
