@@ -1,0 +1,83 @@
+---
+layout: blog
+title: Tackling MongoMapper Relationships
+summary: A discussion about how to create many to many relationships using MongoMapper in it's current state.
+---
+
+h1. {{ page.title }}
+
+p. 23 Dec 2009 - Kyoto, Japan
+
+I popped into the "MongoMapper Google Group":http://groups.google.com/group/mongomapper and inquired about some behavior I thought was odd.  Like most posts tend to go, I figured out what was causing my issue moments after posting by digging through the mongomapper code.  Thankfully John Nunemaker gave me a satisfactory solution for handling my issue, although pointed out that he would eventually create such an association once he sorted it out.
+
+I assumed the following code would actually work:
+
+{% highlight ruby linenos %}
+class Skill
+  include MongoMapper::Document
+
+  key :name, String
+  # etc
+end
+
+class Character
+  include MongoMapper::Document
+
+  key :name, String
+  # etc
+
+  many :skills
+end
+
+skill = Skill.create(:name => "Attack")
+
+character1 = Character.create(:name => "character1")
+character1.skills << skill
+.
+.
+.
+characterN = Character.create(:name => "characterN")
+characterN.skills << skill
+{% endhighlight %}
+
+Unfortunately what really happens behind the scenes is that Skill keeps having a character_id internally remapped to the last Character it was assigned to.  This kind of behavior makes sense, I just hadn't wrapped my head around it.
+
+The next solution is along the lines of what John recommended:
+
+{% highlight ruby linenos %}
+class Skill
+  include MongoMapper::Document
+
+  key :name, String
+  # etc
+end
+
+class Character
+  include MongoMapper::Document
+
+  key :name, String
+  # etc
+
+  key :skill_ids, Array
+
+  def skills
+    Skill.find(self.skill_ids)
+  end
+end
+
+skill = Skill.create(:name => "Attack")
+
+character1 = Character.create(:name => "character1")
+character1.skill_ids << skill.id
+.
+.
+.
+characterN = Character.create(:name => "characterN")
+characterN.skill_ids << skill.id
+{% endhighlight %}
+
+Now everything works wonderfully.  The only drawback is that there's no fancy find() functionality to tie into the skills() method, which has proven to be extremely useful for _:many_ relationships where I use something akin to a join Model.  Note that creating a join-like Model to deal with the relationship is also a suitable way to go about tackling this problem.
+
+My ultimate hope was that some DBRef/dereference magic was going on to create/translate the relationships for me, but after reading around a little it appears to be a fancy way to create collection_id foreign key relationships, and not something that built many-to-many relationships as I pictured in my head.
+
+In conclusion, I now have a decently working many-to-many relationship working, and all future Character's are not stealing everyone else's skills!
