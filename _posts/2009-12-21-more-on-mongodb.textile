@@ -98,3 +98,5 @@ character.skills << Skill.find(:first, :name => "Attack")
 {% endhighlight %}
 
 That's it!  It really is that simple.
+
+Update: As the post after this one has shown, the above code doesn't work as intended.  Please read that post for more information.
