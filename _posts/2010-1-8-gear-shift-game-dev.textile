@@ -1,0 +1,120 @@
+---
+layout: blog
+title: "Gear Shift: Game Development"
+summary: A shift in blog gears, as I talk about what I am working on.
+---
+
+h1. {{ page.title }}
+
+p. 8 Jan 2010 - Kyoto, Japan
+
+Up to this point I haven't really been sure where to take this blog.  It was pretty cool to make the whole thing, Jeykll it, and drop it on GitHub.  I was quite happy to see a lot of visitor hits looking at the MongoMapper and Cucumber stuff, but the truth is I'm really not building or enhancing technology so much right now as I am flat out using it.
+
+I kind of hinted at what I am doing on my "personal blog":http://mojobojo.posterous.com/the-project-69, but it's here that I will discuss a couple things I am designing in depth.  At the very least, it's a personal motivator which I can display, and hopefully interested parties can take what they will from it.
+
+Today's topic was Achievement Systems.  I honestly thought this was going to be much more difficult, so have been putting it off for awhile.  In the end it only took about 30 minutes to implement a very simple system which I am quite pleased with.  The following is a breakdown of the code that drives it.
+
+First of all is of course, are the database models.  We use the _lang_ key as a forward thinking approach to i18n.
+
+{% highlight ruby linenos %}
+class Achievement
+  include MongoMapper::Document
+  
+  key :name, String
+  key :description, String
+  key :requirements, String
+  key :lang, String
+end
+
+class CharacterAchievement
+  include MongoMapper::Document
+  
+  key :character_id, ObjectId
+  key :achievement_id, ObjectId
+  key :date_awarded, Time
+  
+  belongs_to :character
+  belongs_to :achievement
+end
+
+{% endhighlight %}
+
+The yaml data file which loads our Achievements into the database when we prep the system using _db/seeds.rb_.
+
+{% highlight yaml linenos %}
+- name: A Familiar!
+  description: Received first familiar.
+  requirements: " == 1"
+  type: FAMILIAR
+  
+- name: A Quest!
+  description: Completed first quest.
+  requirements: " == 1"
+  type: QUEST
+  
+- name: The Rich Get Richer
+  description: Received 100 gold.
+  requirements: " >= 100"
+  type: GOLD
+{% endhighlight %}
+
+The Achievement System code.
+
+{% highlight ruby linenos %}
+class AchievementSystem
+  
+  # Scans to see if the character has completed any Achievements of type
+  def self.scan(player, type)
+    completed = []
+    
+    achievements = Achievement.find(:all, :type => type)
+    
+    for achievement in achievements
+      found = false
+      player.character_achievements.each do |pach|
+        if pach.achievement_id == achievement.id
+          found = true
+        end
+      end
+      next if found
+      
+      case type
+        when "FAMILIAR"
+          completed << achievement if eval("player.character_familiars.count %s" % achievement.requirements)
+        when "QUEST"
+          completed_quests = player.character_quests.find(:all, :is_completed => true)
+          completed << achievement if eval("completed_quests.size %s" % achievement.requirements)
+        when "GOLD"
+          completed << achievement if eval("player.total_gold %s" % achievement.requirements)
+      end
+    end
+    
+    return completed.collect do |ach|
+      CharacterAchievement.create(:character_id => player.id, :achievement_id => ach.id, :date_awarded => Time.now)
+    end
+  end
+  
+end
+{% endhighlight %}
+
+And finally, the code which gets called inside the Character model.
+
+{% highlight ruby linenos %}
+def achievement_check(type=nil)
+  # For now just scan them all
+  achievements = []
+  AchievementSystem.scan(self, "FAMILIAR").each {|a| achievements << a}
+  AchievementSystem.scan(self, "QUEST").each {|a| achievements << a}
+  AchievementSystem.scan(self, "GOLD").each {|a| achievements << a}
+  achievements.each do |cach|
+    log(CharacterLog::Achievement, "Awarded Achievement: %s" % cach.achievement.name)
+  end
+  return achievements
+end
+{% endhighlight %}
+
+There's still a lot more to clean up and fix, but that's the basics.  Currently in my _ApplicationController_ I call a before_filter which then runs the _achievement_check_ method.  However, for the sake of efficiency my future plan is to put _achievement_check_ in methods where I know only limited achievement types will get called (i.e. the _receive_gold_ method would trigger GOLD achievements), and then check the Character object later to see if any Achievements have been triggered while it's been passed around the system.
+
+In conclusion, I'm very satisfied with the results of my Achievement System.  My next task is to add in optional Item rewards, and a handful of other types which will eventually be required.
+
+Note: I'm keenly aware of how log() breaks i18n right now.  I'm currently researching the best way to drop support into Models, and would gladly use Globalize2 if it supported MongoMapper right now.  For the time being though, finishing the core logic has been my top priority, so hopefully something turns up in the next month or two.
