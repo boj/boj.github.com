@@ -34,8 +34,8 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 	<div class="section_detail">
 		<ul>
 		  <li>Unix system administration.</li>
-		  <li>Ruby on Rails development.  3+ years experience.</li>
-		  <li>PHP language.  5+ years experience.</li>
+		  <li>Ruby on Rails development.  4+ years experience.</li>
+		  <li>PHP language.  6+ years experience.</li>
 		  <li>Software testing.  Behavior Driven Development (BDD), Test Driven Development (TDD).</li>
 		  <li>Web technology.  AJAX/Web2.0, XML/XHTML/YAML, etc.</li>
 		</ul>
@@ -53,10 +53,14 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 			02/2010 - Present<br/>
 		</span>
 		<div class="job_data">
-			<strong>Development Tools:</strong> PHP, Objective-C, XCode, Interface Builder, Linux, MySQL, Apache, SVN<br/>
+			<strong>Development Tools:</strong> PHP, Objective-C, XCode, Interface Builder, Linux, MySQL, Apache, SVN, Xen, MongoDB, LVS.<br/>
 			<strong>Duties:</strong><br/>
+			<h3>Project "Georgia"</h3>
 			<ul>
-			  <li>Research and develop the frameworks and behaviors for the server and client->server interactions for an upcoming title.</li>
+			  <li>Built a scalable server infrastructure on a large test machine running Xen.  Consists of 12 nodes, broken down into web, LVS load balancers, MySql Master/Slave databases further split out by tables into an M1+S1..SN / M2+S2..SN architecture, MongoDB-as-memcached servers, a sharded MongoDB cluster for large/log tables, and a staging server for deploying database scripts, cronjobs, and backup services.</li>
+			  <li>Wrote a <a href="http://github.com/boj/mongodbcache-php" title="MongoDBCache">MongoDBCache client</a> in PHP to mimic memcached behavior.</li>
+			  <li>Wrote the entire web game infrastructure in CakePHP, allowing for various Model inheritance layers to interact with the complex DB schema and cache servers transparently.</li>
+			  <li>Developed a preliminary iPhone client with web interactions, and connections to the OpenFeint/MiniNation API.</li>
 			</ul>
 		</div>
 	</div>
@@ -70,7 +74,6 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 			<strong>Development Tools:</strong> Ruby on Rails, MongoDB, git, GitHub<br/>
 			<ul>
 				<li>Currently developing a social network interfacing game website using Ruby on Rails and MongoDB, complete with internationalization support, and massive scalability as a long term goal.</li>
-				<li>Simultaneously doing more consulting work for Geek City, building a Ruby on Rails and MongoDB work management system which integrates fully with Google.</li>
 			</ul>
 		</div>
 	</div>
@@ -224,9 +227,9 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 	<div class="section_detail">
 		<strong>System Tools:</strong>
 		<ul>
-			<li>Oracle, PostgreSQL, MySQL, SQLite.</li>
+			<li>MongoDB, Oracle, PostgreSQL, MySQL, SQLite.</li>
 			<li>Apache, Mongrel, Lighttpd, IIS.</li>
-			<li>OpenVPN, BIND DNS.</li>
+			<li>Xen, VPS, OpenVPN, BIND DNS.</li>
 		</ul>
 	</div>
 	
@@ -234,7 +237,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 		<strong>Operating Systems:</strong>
 		<ul>
 			<li>Mac OSX.</li>
-			<li>Linux (Gentoo, Ubuntu, Slackware, RedHat, etc.).</li>
+			<li>Linux (Gentoo, Ubuntu, CentOS, Slackware, RedHat, etc.).</li>
 			<li>FreeBSD, OpenBSD, IRIX, Solaris.</li>
 			<li>DOS, Windows *.</li>
 		</ul>	
@@ -279,7 +282,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 			<li>The 4,000 year old board game <a href="http://gobase.org" title="A great Go website">Go</a>.  
 				<ul>
 					<li>Former President of the Fairbanks Go Club.</li>
-					<li>Ranked 2-dan (master level) at Sonobe Go Club, Japan.</li>
+					<li>Ranked 1-dan (master level) at the Japanese Go Institute in Osaka, Japan.</li>
 					<li>Ranked 3-kyu (high level amateur) on the KGS internet Go server.</li>
 				</ul>
 			</li>	
