@@ -5,8 +5,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 
 <span class="information">
 	<span class="name">Brian Jones</span><br/>
-		Osaka-shi Minato-ku Osakako 4-2-24<br/>
-		Peurto Ichiban 701<br/>
+		Osaka-shi Minato-ku Osakako 4-2-24 701<br/>
     552-0021 Osaka, Japan<br/>
 	<em>mojobojo at gmail dot com</em><br/>
 	Mobile: 090-6913-0964<br/>
@@ -16,12 +15,12 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 
 <!-- Start Summary Section -->
 <div class="section">
-	<span class="section_title">Professional Summary</span>
+	<h2>Professional Summary</h2>
 	<div class="section_detail">
 		<ul>
 		  <li>Very self motivated, organized, require little direction.</li>
-		  <li>Experience with project management, from initial database design to the end user.</li>
-		  <li>Strong understanding of software development process.</li>
+		  <li>Experience with project management, from server infrastructure, database design, to the end user interface.</li>
+		  <li>Strong understanding of software development process.  Prefer BDD when applicable.</li>
 		  <li>Personally committed to continuous learning, and broadening of knowledge.</li>
 		</ul>
 	</div>
@@ -30,14 +29,13 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 
 <!-- Start Technical Section -->
 <div class="section">
-	<span class="section_title">Technical Summary</span>
+	<h2>Technical Summary</h2>
 	<div class="section_detail">
 		<ul>
-		  <li>Unix system administration.</li>
-		  <li>Ruby on Rails development.  4+ years experience.</li>
-		  <li>PHP language.  6+ years experience.</li>
+		  <li>Unix system administration.  Linux 15+ years, 10+ professional.</li>
+		  <li>Ruby on Rails development.  5+ years experience.</li>
+		  <li>PHP language.  7+ years experience.</li>
 		  <li>Software testing.  Behavior Driven Development (BDD), Test Driven Development (TDD).</li>
-		  <li>Web technology.  AJAX/Web2.0, XML/XHTML/YAML, etc.</li>
 		</ul>
 	</div>
 </div>
@@ -45,7 +43,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 
 <!-- Start Work Section -->
 <div class="section">
-	<span class="section_title">Work Experience</span>
+	<h2>Work Experience</h2>
 	
 	<div class="work_box">
 		<span class="employer_data">
@@ -53,27 +51,23 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 			02/2010 - Present<br/>
 		</span>
 		<div class="job_data">
-			<strong>Development Tools:</strong> PHP, Objective-C, XCode, Interface Builder, Linux, MySQL, Apache, SVN, Xen, MongoDB, LVS.<br/>
+			<strong>Development Tools:</strong> PHP, Objective-C, XCode, Interface Builder, Ruby, Linux, MySQL, Apache, SVN, Git, Xen, MongoDB, LVS, Memcache.<br/>
 			<strong>Duties:</strong><br/>
+			<h3>Server Infrastructure Team</h3>
+			<ul>
+			  <li>Build and maintain scalable infrastructures for Istpika's social game titles.</li>
+			  <li>Work closely with other team members to determine which technologies are worth using in the future.</li>
+			</ul>
+			<h3>Tools</h3>
+			<ul>
+			  <li>Wrote <a href="https://github.com/boj/databasion" title="databasion">databasion</a>, a Google Spreadsheet -> YAML -> Ruby Migration -> Database schema/data management tool.</li>
+			  <li>Wrote a <a href="http://github.com/boj/mongodbcache-php" title="MongoDBCache">MongoDBCache client</a> in PHP to mimic memcached behavior.</li>
+			</ul>
 			<h3>Project "Georgia"</h3>
 			<ul>
-			  <li>Built a scalable server infrastructure on a large test machine running Xen.  Consists of 12 nodes, broken down into web, LVS load balancers, MySql Master/Slave databases further split out by tables into an M1+S1..SN / M2+S2..SN architecture, MongoDB-as-memcached servers, a sharded MongoDB cluster for large/log tables, and a staging server for deploying database scripts, cronjobs, and backup services.</li>
-			  <li>Wrote a <a href="http://github.com/boj/mongodbcache-php" title="MongoDBCache">MongoDBCache client</a> in PHP to mimic memcached behavior.</li>
+			  <li>Built a scalable server infrastructure.  Consisted of 16 nodes: Apache x6, LVS x2, MySQL x4, Memcache x2, Admin/Log x2.</li>
 			  <li>Wrote the entire web game infrastructure in CakePHP, allowing for various Model inheritance layers to interact with the complex DB schema and cache servers transparently.</li>
 			  <li>Developed a preliminary iPhone client with web interactions, and connections to the OpenFeint/MiniNation API.</li>
-			</ul>
-		</div>
-	</div>
-	
-	<div class="work_box">
-		<span class="employer_data">
-			Freelance Ruby Developer<br/>
-			09/2009 - Present<br/>
-		</span>
-		<div class="job_data">
-			<strong>Development Tools:</strong> Ruby on Rails, MongoDB, git, GitHub<br/>
-			<ul>
-				<li>Currently developing a social network interfacing game website using Ruby on Rails and MongoDB, complete with internationalization support, and massive scalability as a long term goal.</li>
 			</ul>
 		</div>
 	</div>
@@ -200,27 +194,27 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 
 <!-- Begin Professional Knowledge Section -->
 <div class="section">
-	<span class="section_title">Professional Knowledge</span>
+	<h2>Professional Knowledge</h2>
 
 	<div class="section_detail">
 		<strong>Programming Languages:</strong>
 		<ul>
-			<li>Ruby, Python, PHP, SQL.</li>
-			<li>C#, Java, C/C++, x86 ASM, Pascal, ASP, Perl, ETI.</li>
+			<li>Ruby, Python, PHP, JavaScript, SQL.</li>
+			<li>Objective-C, C#, Java, C/C++, x86 ASM, Pascal, ASP, Perl, ETI.</li>
 		</ul>	
 	</div>
 
 	<div class="section_detail">
 		<strong>Interface Markup/Tools:</strong>
 		<ul>
-			<li>XHTML/CSS, XML, XSLT, JavaScript.</li>
+			<li>XHTML/CSS, XML, XSLT.</li>
 		</ul>	
 	</div>
 	
 	<div class="section_detail">
 		<strong>Development Tools:</strong>
 		<ul>
-			<li>GIT, Subversion, CVS.</li>
+			<li>Git, Subversion, CVS.</li>
 		</ul>
 	</div>
 	
@@ -228,8 +222,8 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 		<strong>System Tools:</strong>
 		<ul>
 			<li>MongoDB, Oracle, PostgreSQL, MySQL, SQLite.</li>
-			<li>Apache, Mongrel, Lighttpd, IIS.</li>
-			<li>Xen, VPS, OpenVPN, BIND DNS.</li>
+			<li>Apache, Mongrel, Lighttpd, Nginx, IIS.</li>
+			<li>Xen, VPS, OpenVPN, BIND DNS, Nagios, Ganglia.</li>
 		</ul>
 	</div>
 	
@@ -256,7 +250,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 	
 <!-- Begin Education Section -->	
 <div class="section">
-	<span class="section_title">Formal Education</span>
+	<h2>Formal Education</h2>
 	<div class="section_detail">
 		<ul>
 			<li>1997-2007: University of Alaska, Fairbanks.
@@ -274,7 +268,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 
 <!-- Begin Personal Interests Section -->	
 <div class="section">
-	<span class="section_title">Personal Interests</span>
+	<h2>Personal Interests</h2>
 	<div class="section_detail">
 		<ul>
 			<li>Linux.  First install - 1996 - 2.0.12 kernel.</li>

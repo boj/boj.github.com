@@ -1,15 +1,15 @@
 body {
 	font: 12px/1.5em "Lucida Grande", "Lucida Sans Unicode";
-	color: #999;
-	background: #666666;
+	color: white;
+	background: #2993BF;
 }
 
 h1, h2, h3, h4, h5 {
-	color: #6bb4fb;
+	color: orange;
 }
 
 a {
-	color: black;
+	color: #AABF73;
 	text-decoration: none;
 }
 
@@ -26,12 +26,7 @@ a:hover {
 /* Site ID tags */
 
 #header {
-	padding: 2em;
-}
-
-#header > h1 > a {
-	font: 1.5em verdana;
-	color: #19448e;
+	padding: 1em;
 }
 
 #content {
@@ -103,9 +98,7 @@ p.intro:first-letter {
 /* Resume Data */
 
 .section_title {
-	font-variant: small-caps;
-	font-size: larger;
-	font-weight: bolder;
+
 }
 
 .section_detail {
