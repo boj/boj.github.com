@@ -5,27 +5,13 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 
 <span class="information">
 	<span class="name">Brian Jones</span><br/>
-		Osaka-shi Minato-ku Osakako 4-2-24 701<br/>
+		Osaka-shi Minato-ku Chikko 4-2-24 701<br/>
     552-0021 Osaka, Japan<br/>
 	<em>mojobojo at gmail dot com</em><br/>
 	Mobile: 090-6913-0964<br/>
 </span>
 
 <hr/>
-
-<!-- Start Summary Section -->
-<div class="section">
-	<h2>Professional Summary</h2>
-	<div class="section_detail">
-		<ul>
-		  <li>Very self motivated, organized, require little direction.</li>
-		  <li>Experience with project management, from server infrastructure, database design, to the end user interface.</li>
-		  <li>Strong understanding of software development process.  Prefer BDD when applicable.</li>
-		  <li>Personally committed to continuous learning, and broadening of knowledge.</li>
-		</ul>
-	</div>
-</div>
-<!-- End Summary Section -->
 
 <!-- Start Technical Section -->
 <div class="section">
@@ -47,12 +33,9 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 	
 	<div class="work_box">
 		<span class="employer_data">
-			<a href="http://www.istpika.com">Istpika</a> Osaka, Japan<br/>
-			02/2010 - Present<br/>
+			<a href="http://www.istpika.com">Istpika</a> | Osaka, Japan | 02/2010 - Present
 		</span>
 		<div class="job_data">
-			<strong>Development Tools:</strong> PHP, Objective-C, XCode, Interface Builder, Ruby, Linux, MySQL, Apache, SVN, Git, Xen, MongoDB, LVS, Memcache.<br/>
-			<strong>Duties:</strong><br/>
 			<h3>Server Infrastructure Team</h3>
 			<ul>
 			  <li>Build and maintain scalable infrastructures for Istpika's social game titles.</li>
@@ -61,25 +44,28 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 			<h3>Tools</h3>
 			<ul>
 			  <li>Wrote <a href="https://github.com/boj/databasion" title="databasion">databasion</a>, a Google Spreadsheet -> YAML -> Ruby Migration -> Database schema/data management tool.</li>
-			  <li>Wrote a <a href="http://github.com/boj/mongodbcache-php" title="MongoDBCache">MongoDBCache client</a> in PHP to mimic memcached behavior.</li>
+			  <li>Wrote a <a href="http://github.com/boj/mongodbcache-php" title="MongoDBCache">MongoDBCache client</a> in PHP to mimic memcached behavior, although was never used in production.</li>
 			</ul>
-			<h3>Project "Georgia"</h3>
+			<h3>Project "Alice" (in development)</h3>
 			<ul>
-			  <li>Built a scalable server infrastructure.  Consisted of 16 nodes: Apache x6, LVS x2, MySQL x4, Memcache x2, Admin/Log x2.</li>
+			  <li>Built a scalable server infrastructure.  Consisted of 19 nodes: Apache x5, LVS x2, MySQL x4, Memcache x5, Admin/Log x3.</li>
+			  <li>Configured various maintenance tools such as Ganglia, Nagios, etc.</li>
+			</ul>
+			<h3>Project "Georgia" (unreleased)</h3>
+			<ul>
 			  <li>Wrote the entire web game infrastructure in CakePHP, allowing for various Model inheritance layers to interact with the complex DB schema and cache servers transparently.</li>
 			  <li>Developed a preliminary iPhone client with web interactions, and connections to the OpenFeint/MiniNation API.</li>
 			</ul>
 		</div>
 	</div>
 	
+	<hr/>
+	
 	<div class="work_box">
 		<span class="employer_data">
-			<a href="http://www.jetprogramme.org/" title="JET Program">JET Program</a> Kyotamba-cho, Japan<br/>
-			Assistant Language Teacher<br/>
-			08/2007 - 08/2009<br/>
+			<a href="http://www.jetprogramme.org/" title="JET Program">JET Program</a> | Kyotamba-cho, Japan | Assistant Language Teacher | 08/2007 - 08/2009
 		</span>
 		<div class="job_data">
-			<strong>Duties:</strong><br/>
 			<ul>
 			  <li>Assist Japanese teacher of English (JTE) in classroom environment.</li>
 				<li>Design and handout worksheets and activities to students.</li>
@@ -88,44 +74,51 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 		</div>
 	</div>		
 	
+	<hr/>
+	
 	<div class="work_box">
 		<span class="employer_data">
-			<a href="http://www.gvea.com" title="GVEA Website">Golden Valley Electric Association</a> Fairbanks, AK<br/>
-			Part Time Systems Analyst<br/>
-			11/1999 - 09/2005, 09/2006 - 07/2007<br/>
+			<a href="http://www.gvea.com" title="GVEA Website">Golden Valley Electric Association</a> | Fairbanks, AK | Systems Engineer | 11/1999 - 09/2005, 09/2006 - 07/2007
 		</span>
-		<div class="job_data">	
-			<strong>Development Tools:</strong> Ruby on Rails, Oracle, Linux, Windows IIS, CVS<br/>
-			<strong>Duties:</strong><br/>
+		<div class="job_data">
+		  <ul>
+		    <li>Replaced various PHP/Java systems with Ruby on Rails.</li>
+		  </ul>
+		  <h3>Project "Integrated Management System"</h3>
 			<ul>
-				<li>Replaced various PHP/Java systems with Ruby on Rails.</li>
-				<li>Built an <em>Integrated Management System</em> according to user specifications.
+				<li>Built system according to user specifications.
 					<ul>
-              <li>Met with key shareholders and discussed the desired feature enhancements over older systems.</li>
+            <li>Met with key users and discussed the desired feature enhancements over older systems.</li>
 						<li>Delegated specific interface components to associates.</li>
 						<li>Oversaw coding, testing, and documentation related project tasks to completion.</li>
-              <li>Primary backend developer (the MC in MVC).  Developed specialized libraries.</li>
-              <li>Heavy AJAX utilization.  
-                <ul>
-                  <li>Used the Prototype/Scriptaculous Javascript libraries.</li>
-                  <li>Integrated a Prototype based windowing system.</li>
-                </ul>
-              </li>
-              <li>Apache + Mongrel configuration
-                <ul>
-                  <li>Configured Apache for static content delivery.</li>
-                  <li>Configured a "Pack of Mongrels" which were served to by Apache's mod_proxy_balancer module.</li>
-                </ul>
-              </li>    
+            <li>Primary backend developer (the MC in MVC).  Developed specialized libraries.</li>
+            <li>Heavy AJAX utilization.  
+              <ul>
+                <li>Used the Prototype/Scriptaculous Javascript libraries.</li>
+                <li>Integrated a Prototype based windowing system.</li>
+              </ul>
+            </li>
+            <li>Apache + Mongrel configuration
+              <ul>
+                <li>Configured Apache for static content delivery.</li>
+                <li>Configured a "Pack of Mongrels" which were served to by Apache's mod_proxy_balancer module.</li>
+              </ul>
+            </li>  
 					</ul>
 				</li>
 			</ul>
-		</div>
-		<div class="job_data">	
-			<strong>Development Tools:</strong> ASP, PHP, Oracle, PostgreSQL, MySQL, Windows IIS, Apache, Apache2, CVS<br/>
-			<strong>Duties:</strong><br/>
+			<h3>System Administration</h3>
 			<ul>
-				<li>Originally hired on as general helpdesk support (5 months).</li>
+			  <li>Administered various Windows and Linux servers.
+					<ul>
+						<li>Windows IIS, Apache, and Apache2 web servers on Windows and Linux.</li>
+						<li>Oracle, PostgreSQL, and MySQL databases on Windows and Linux.</li>
+						<li>Various applications such as IMAP mail, LDAP, Samba, and network monitoring tools (Nagios, Cacti).</li>
+					</ul>
+				</li>
+			</ul>
+      <h3>Web Development</h3>
+			<ul>
 				<li>Developed and supported internal and external corporate websites (Windows and Linux respectively).</li>
 				<li>Built and supported several productivity applications on the company intranet.
 					<ul>
@@ -138,26 +131,21 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 						</li>
 					</ul>
 				</li>	
-				<li>Administered various Windows and Linux servers.
-					<ul>
-						<li>Windows IIS, Apache, and Apache2 web servers on Windows and Linux.</li>
-						<li>Oracle, PostgreSQL, and MySQL databases on Windows and Linux.</li>
-						<li>Various applications such as IMAP mail, LDAP, Samba, and network monitoring tools.</li>
-					</ul>
-				</li>		
+			</ul>
+			<h3>Helpdesk</h3>
+			<ul>
+				<li>Originally hired on as general helpdesk support (5 months).</li>
 			</ul>
 		</div>
-	</div>			
+	</div>
+	
+	<hr/>
 
 	<div class="work_box">
 		<span class="employer_data">
-			<a href="http://www.geekcity.com" title="Geek City Website">Geek City</a> Fairbanks, AK<br/>
-			Programming Consultant<br/>
-			01/2005 - 07/2005<br/>
+			<a href="http://www.geekcity.com" title="Geek City Website">Geek City</a> | Fairbanks, AK | Programming Consultant | 01/2005 - 07/2005
 		</span>
-		<div class="job_data">	
-			<strong>Development Tools:</strong> PHP (Smarty, ADODB), Apache2, PostgreSQL, Subversion, Trac<br/>
-			<strong>Duties:</strong><br/>
+		<div class="job_data">
 			<ul>
 				<li>Developed a work order management system to handle the repair shop customers.
 					<ul>
@@ -169,15 +157,14 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 			</ul>
 		</div>
 	</div>
+	
+	<hr/>
 
 	<div class="work_box">
 		<span class="employer_data">
-			<a href="http://www.uaf.edu" title="UAF Website">University of Alaska, Fairbanks</a> Fairbanks, AK<br/>
-			Linux Instructor<br/>
-			09/2000 - 12/2001<br/>
+			<a href="http://www.uaf.edu" title="UAF Website">University of Alaska, Fairbanks</a> | Fairbanks, AK | Linux Instructor | 09/2000 - 12/2001
 		</span>
-		<div class="job_data">	
-			<strong>Duties:</strong><br/>
+		<div class="job_data">
 			<ul>
 				<li>Taught a 3 credit course on basic linux installation, usage, and configuration.</li>
 				<li>Students were taught in a lab environment with hands on experience.</li>
@@ -223,7 +210,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 		<ul>
 			<li>MongoDB, Oracle, PostgreSQL, MySQL, SQLite.</li>
 			<li>Apache, Mongrel, Lighttpd, Nginx, IIS.</li>
-			<li>Xen, VPS, OpenVPN, BIND DNS, Nagios, Ganglia.</li>
+			<li>Xen, OpenVPN, BIND DNS, Nagios, Ganglia, Cacti.</li>
 		</ul>
 	</div>
 	
@@ -253,7 +240,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 	<h2>Formal Education</h2>
 	<div class="section_detail">
 		<ul>
-			<li>1997-2007: University of Alaska, Fairbanks.
+			<li>1997-2007: University of Alaska, Fairbanks (1997: Art Scholarship)
 				<ul>
 					<li>B.A., Art</li>
 					<li>B.A., Japanese Studies</li>

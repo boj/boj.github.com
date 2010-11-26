@@ -114,6 +114,7 @@ p.intro:first-letter {
 .employer_data {
 	display: block;
 	font-weight: bolder;
+	font-size: 1.2em;
 	margin: 10px;
 }
 
