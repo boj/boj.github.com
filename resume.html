@@ -18,7 +18,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 	<h2>Technical Summary</h2>
 	<div class="section_detail">
 		<ul>
-		  <li>Unix system administration.  Linux 15+ years, 10+ professional.</li>
+		  <li>Unix system administration.  8+ professional.</li>
 		  <li>Building scalable server infrastructures.  Social Games. 1+ years.</li>
 		  <li>NodeJS development. 1+ years experience.</li>
 		  <li>Ruby, Ruby on Rails development.  5+ years experience.</li>
@@ -35,32 +35,39 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 	
 	<div class="work_box">
 		<span class="employer_data">
-			<a href="http://www.istpika.com">Istpika</a> | Osaka, Japan | 02/2010 - Present
+			<a href="http://www.istpika.com">Istpika</a> | Osaka, Japan | Senior Systems Engineer | 02/2010 - Present
 		</span>
 		<div class="job_data">
+		  <ul>
+		    <li>All work related tasks are conducted in 100% Japanese.</li>
+		  </ul>
 			<h3>Server Infrastructure Team</h3>
 			<ul>
 			  <li>Build and maintain scalable infrastructures for Istpika's social game titles.</li>
-			  <li>Work closely with other team members to determine which technologies are worth using in the future.</li>
+			  <li>Work closely with other team members to determine which technologies are worth using in the future, and how to improve support for existing systems.</li>
 			</ul>
 			<h3>Tools</h3>
 			<ul>
-			  <li>Wrote <a href="https://github.com/boj/databasion" title="databasion">databasion</a>, a Google Spreadsheet -> YAML -> Ruby Migration -> Database schema/data management tool.</li>
-			  <li>Wrote a <a href="http://github.com/boj/mongodbcache-php" title="MongoDBCache">MongoDBCache client</a> in PHP to mimic memcached behavior, although was never used in production.</li>
+			  <li>Wrote <a href="https://github.com/boj/databasion" title="databasion">databasion</a>, a Google Spreadsheet -> Database management tool.</li>
+			  <li>Wrote a <a href="http://github.com/boj/mongodbcache-php" title="MongoDBCache">MongoDBCache client</a> in PHP to mimic memcached behavior.  Was never used in production.</li>
 			</ul>
 			<h3>Project "Chaser" (in development)</h3>
 			<ul>
-			  <li>Built a scalable server infrastructure on the RackSpace Cloud.  Consisted of 8 nodes: LVS-TUN x2, Nginx/NodeJS x2, MongoDB x3, Admin x1.</li>
-			  <li>Wrote the NodeJS server code, and built the base JavaScript client code using the <a href="http://developer.getmobage.com/" title="ngGame">ngGame Core SDK.</a></li>
+			  <li>Project Lead Engineer.</li>
+			  <li>Built a <a href="http://boj.github.com/blog/2011/01/14/lvs-nginx-nodejs-mongodb-cluster-setup-on-rackspace/" title"LVS Nginx Nodjs MongoDB - Cluster setup on RackSpace">scalable server infrastructure on the RackSpace Cloud</a>.  Consisted of 8 nodes: LVS-TUN Load Balancers x2, Nginx/NodeJS x2, MongoDB x3, Admin x1.</li>
+			  <li>Wrote the NodeJS server code, and built the base JavaScript client using the <a href="http://developer.getmobage.com/" title="ngGame">ngGame Core SDK.</a></li>
+			  <li>Wrote small client related portions.  AES encrypted data, particle system, core MVC + Delegate code.</li>
 			</ul>
 			<h3>Project "Alice" (unreleased)</h3>
 			<ul>
 			  <li>Built a scalable server infrastructure.  Consisted of 19 nodes: Apache x5, LVS x2, MySQL x4, Memcache x5, Admin/Log x3.</li>
 			  <li>Configured various maintenance tools such as Ganglia, Nagios, etc.</li>
+			  <li>* Infrastructure is now being used by another project "Planet Frontier" (in development).</li>
 			</ul>
 			<h3>Project "Georgia" (unreleased)</h3>
 			<ul>
-			  <li>Wrote the entire web game system in CakePHP, allowing for various Model inheritance layers to interact with the complex DB schema and cache servers transparently.</li>
+			  <li>Project's server side Lead Engineer.</li>
+			  <li>Wrote the entire web game system in CakePHP, allowing for various Model inheritance layers to interact with the various database and cache servers transparently.</li>
 			  <li>Developed a preliminary iPhone client with web interactions, and connections to the OpenFeint/MiniNation API.</li>
 			  <li>Worked with the iPhone client developers to integrate the web based system into the client via JavaScript calls.</li>
 			</ul>
@@ -94,26 +101,9 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 		  </ul>
 		  <h3>Project "Integrated Management System"</h3>
 			<ul>
-				<li>Built system according to user specifications.
-					<ul>
-            <li>Met with key users and discussed the desired feature enhancements over older systems.</li>
-						<li>Delegated specific interface components to associates.</li>
-						<li>Oversaw coding, testing, and documentation related project tasks to completion.</li>
-            <li>Primary backend developer (the MC in MVC).  Developed specialized libraries.</li>
-            <li>Heavy AJAX utilization.  
-              <ul>
-                <li>Used the Prototype/Scriptaculous Javascript libraries.</li>
-                <li>Integrated a Prototype based windowing system.</li>
-              </ul>
-            </li>
-            <li>Apache + Mongrel configuration
-              <ul>
-                <li>Configured Apache for static content delivery.</li>
-                <li>Configured a "Pack of Mongrels" which were served to by Apache's mod_proxy_balancer module.</li>
-              </ul>
-            </li>  
-					</ul>
-				</li>
+				<li>Built a custom management system for GVEA's Computing and Network Services department using Ruby on Rails.</li>
+				<li>System was intended as a proof of concept to show the agile development speed of Rails vs. Java.</li>
+				<li>Still currently used as the department's primary management application.</li>
 			</ul>
 			<h3>System Administration</h3>
 			<ul>
@@ -130,7 +120,7 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 				<li>Developed and supported internal and external corporate websites (Windows and Linux respectively).</li>
 				<li>Built and supported several productivity applications on the company intranet.
 					<ul>
-						<li>Standardized PHP code base (MVC design pattern, ORM, and Smarty templates).</li>
+						<li>Standardized PHP code base (MVC design pattern, custom ORM, and Smarty templates).</li>
 						<li>
 							Data Center Fiber Management System, Content Management System, 
 							Helpdesk/Project Work Order Management System, Inventory Management System, 
@@ -176,10 +166,8 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 			<ul>
 				<li>Taught a 3 credit course on basic linux installation, usage, and configuration.</li>
 				<li>Students were taught in a lab environment with hands on experience.</li>
-				<li>The final exam tested their ability to install a linux system, configure a workstation environment, 
-					and build a new linux kernel.</li>
-				<li>Advanced topics included system security, server configuration, and
-					linux in a large scale network environment.</li>
+				<li>The final exam tested their ability to install a linux system, configure a workstation environment, and build a new linux kernel.</li>
+				<li>Advanced topics included system security, server configuration, and linux in a large scale network environment.</li>
 			</ul>
 		</div>			
 	</div>
@@ -194,8 +182,8 @@ title: Brian Jones - Resume - Valid XHTML 1.1 / CSS2
 	<div class="section_detail">
 		<strong>Programming Languages:</strong>
 		<ul>
-			<li>Ruby, Python, PHP, JavaScript, SQL.</li>
-			<li>Objective-C, C#, Java, C/C++, x86 ASM, Pascal, ASP, Perl, ETI.</li>
+			<li>Ruby, Python, JavaScript, PHP, SQL.</li>
+			<li>Objective-C, C/C++, C#, Java, x86 ASM, Pascal, ASP, Perl, ETI.</li>
 		</ul>	
 	</div>
 
