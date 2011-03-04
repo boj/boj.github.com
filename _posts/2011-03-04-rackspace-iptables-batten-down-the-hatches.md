@@ -99,6 +99,8 @@ The vrrp commands allow your LVS machines to broadcast to each other so they can
     /sbin/service iptables save
 
     iptables -L -v
+    
+The eth1 rule is to allow LVS to connect to the realserver.  Without it your connection will just hang at the director level.
 
 ### Database Cluster Configuration
 
