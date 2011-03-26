@@ -154,6 +154,8 @@ Then set with _sysctl -p_.
 
 ## Application Servers - Node, Nginx, and Monit
 
+*UPDATE - 2011-03-4:* The Mongoose module had just reached it's 1.0 release, but still had a lot of incomplete features and bugs and had gone through 10 minor revisions within a week.  I'm still a huge fan of NodeJS and Mongoose, but had to set it aside this time around.  For posterity sake I will keep the following section intact, but want to point out that in it's place I setup Ruby Enterprise Edition + Passenger on Nginx and wrote the server logic using the super lightweight Ramaze framework plus MongoMapper.  I have to admit the Ruby fan in me had no regrets about going this direction.
+
 The main goal here is to get multiple instances of our NodeJS server running on a single server instance, and proxying them behind an Nginx server.  The main reason for this is because RackSpace servers have 4 CPUs, and we would like to make use of all of them.  I am also not 100% confident in running NodeJS as a stable standalone process, so we want another layer in front of it in the case of failure.
 
 ### NodeJS
