@@ -6,7 +6,7 @@ summary: Reviving my github blog with relevant posts about my work and personal 
 
 # {{ page.title }}
 
-15 Nov 2010 - Osaka, Japan
+__15 Nov 2010 - Osaka, Japan__
 
 My apologies to anyone visiting my site looking for MongoDB/Cucumber posts.  The data was almost a year old and irrelevant, so I have taken them down.  Their contents can still be viewed via my [github respository](https://github.com/boj/boj.github.com) should anyone still be interested.
 
