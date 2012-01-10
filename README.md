@@ -1,3 +1,3 @@
 # mojobojo dot com
 
-Now updated to use <http://github.com/mojombo/jekyll>
+Potential forkers:  Make sure you change the google analytics key :)
