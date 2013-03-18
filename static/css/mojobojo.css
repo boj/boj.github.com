@@ -1,7 +1,7 @@
 body {
 	font: 14px/1.5em "Lucida Grande", "Lucida Sans Unicode";
-	color: white;
-	background: black;
+	color: black;
+	background: white;
 }
 
 h1, h2 {
@@ -9,7 +9,7 @@ h1, h2 {
 }
 
 h3, h4, h5 {
-    color: lightblue;
+    color: #0080FF;
 }
 
 a {
@@ -34,7 +34,7 @@ a:hover {
 }
 
 #content {
-	margin: 5px 20% 10% 20%;
+	margin: 5px 10% 10% 10%;
 }
 
 #content_body {
